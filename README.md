@@ -18,6 +18,6 @@ If all went well, webstorm should launch. You'll either be asked to import webst
  
 
 ## Todo
-- Ability to easily load up your project files
-- Ability to easily load up webstorm your keymap and configurations
-- See how we can configure for Macs and other OS other than ubuntu using X.11
+- [x] Ability to easily load up your project files
+- [x] Ability to easily load up webstorm your keymap and configurations
+- [ ] See how we can configure for Macs and other OS other than ubuntu using X.11
