@@ -12,12 +12,15 @@ RUN export uid=1000 gid=1000 && \
 RUN apt-get update
 RUN sudo apt-get install wget zenity default-jre default-jdk -y
 
+COPY files/WebStorm-2016.1.1.tar.gz /opt/WebStorm.tar.gz
+
+RUN tar -zxf /opt/WebStorm.tar.gz -C /opt/
+RUN mv /opt/WebStorm-145.597.6 /opt/WebStorm
+RUN ln -s /opt/WebStorm/bin/webstorm.sh /usr/bin/wstorm
+
 WORKDIR /home/developer
 USER developer
 ENV HOME /home/developer
 
-RUN wget http://download.jetbrains.com/webstorm/WebStorm-11.0.1.tar.gz
-RUN tar -zxvf WebStorm-11.0.1.tar.gz
-
-CMD /home/developer/WebStorm-143.382.36/bin/webstorm.sh
+CMD wstorm
 

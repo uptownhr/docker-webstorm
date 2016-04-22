@@ -1,0 +1,11 @@
+gui:
+  image: ubuntu:14.04
+  volumes:
+  - /tmp/.X11-unix:/tmp/.X11-unix
+  - ${HOME}:/home/developer
+webstorm:
+  build: ./
+  volumes_from:
+  - gui
+  environment:
+  - DISPLAY=${DISPLAY}
