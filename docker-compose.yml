@@ -4,7 +4,7 @@ gui:
   - /tmp/.X11-unix:/tmp/.X11-unix
   - ${HOME}:/home/developer
 webstorm:
-  build: ./
+  image: uptownhr/docker-webstorm
   volumes_from:
   - gui
   environment:
